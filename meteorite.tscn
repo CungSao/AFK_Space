@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxol7trwi6unb"]
+
+[ext_resource type="Texture2D" uid="uid://c3csf8r2wtvii" path="res://icon.svg" id="1_81xcu"]
+[ext_resource type="Script" path="res://data/Junk/JunkFly.gd" id="2_f2kfu"]
+[ext_resource type="Script" path="res://data/Despawn/DespawnByDistance.gd" id="3_u4pv6"]
+
+[node name="Meteorite" type="Node2D"]
+
+[node name="Model" type="Sprite2D" parent="."]
+modulate = Color(0.470588, 0.588235, 0, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_81xcu")
+
+[node name="JunkFly" type="Node2D" parent="."]
+script = ExtResource("2_f2kfu")
+move_speed = 100.0
+
+[node name="Despawn" type="Node2D" parent="."]
+script = ExtResource("3_u4pv6")
